@@ -38,10 +38,6 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  if (gitpod_workspace_url = ENV["GITPOD_WORKSPACE_URL"])
-    config.hosts << "3000-" + URI.parse(gitpod_workspace_url).host
-  end
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
